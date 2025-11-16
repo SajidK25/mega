@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Set the AWS Node Instance ID (where app will be running) and path to the .env file
-INSTANCE_ID="i-0bd3747344a89e81d"
+#INSTANCE_ID="i-0bd3747344a89e81d"
 
 # Retrieve the public IP address of the specified EC2 instance
-ipv4_address=$(aws ec2 describe-instances --instance-ids $INSTANCE_ID --query 'Reservations[0].Instances[0].PublicIpAddress' --output text)
-
+#ipv4_address=$(aws ec2 describe-instances --instance-ids $INSTANCE_ID --query 'Reservations[0].Instances[0].PublicIpAddress' --output text)
+ipv4_address=192.168.0.61
 # Path to the .env file
 file_to_find="../backend/.env.docker"
 
